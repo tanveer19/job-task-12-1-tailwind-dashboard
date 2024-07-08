@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>tailwind-dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
   </head>
   <body>
     <main class="max-w-[1440px] w-full mt-5 mx-auto bg-black rounded-2xl flex">
-      <section class="text-white ml-20">
+      <!-- left side -->
+      <section class="text-white mx-20 w-1/7">
         <div class="mt-20">
           <div class="relative w-fit">
             <img class="" src="/images/profile.png" alt="profile" />
@@ -35,10 +42,10 @@
 
       <!-- right side -->
 
-      <section class="my-8 px-8 rounded-2xl bg-white text-black w-4/5">
+      <section class="my-5 pl-8 rounded-2xl bg-white text-black w-4/5 flex">
         <!-- expense part -->
 
-        <section class="w-3/4">
+        <section class="w-3/4 px-24">
           <div class="flex justify-between items-center">
             <h1 class="text-2xl font-bold mt-5">Expenses</h1>
             <div class="flex items-center relative">
@@ -167,7 +174,84 @@
         </section>
 
         <!-- where money goes part -->
-        <section></section>
+        <section class="bg-[#f9fafc] p-10">
+          <div class="flex flex-col">
+            <h2 class="text-xl font-bold my-5">Where your money go?</h2>
+            <div class="space-y-3">
+              <!-- items -->
+              <div class="">
+                <div class="flex justify-between">
+                  <p>Food and Drinks</p>
+                  <p>872.400</p>
+                </div>
+                <progress
+                  class="progress progress-success"
+                  value="25"
+                  max="100"
+                ></progress>
+              </div>
+              <div class="">
+                <div class="flex justify-between">
+                  <p>Shopping</p>
+                  <p>1.378.200</p>
+                </div>
+                <progress
+                  class="progress progress-success"
+                  value="40"
+                  max="100"
+                ></progress>
+              </div>
+              <div class="">
+                <div class="flex justify-between">
+                  <p>Housing</p>
+                  <p>928.500</p>
+                </div>
+                <progress
+                  class="progress progress-success"
+                  value="30"
+                  max="100"
+                ></progress>
+              </div>
+              <div class="">
+                <div class="flex justify-between">
+                  <p>Transportation</p>
+                  <p>420.700</p>
+                </div>
+                <progress
+                  class="progress progress-success"
+                  value="20"
+                  max="100"
+                ></progress>
+              </div>
+              <div class="">
+                <div class="flex justify-between">
+                  <p>Vehicle</p>
+                  <p>520.000</p>
+                </div>
+                <progress
+                  class="progress progress-success"
+                  value="40"
+                  max="100"
+                ></progress>
+              </div>
+            </div>
+            <!-- box -->
+            <div
+              class="bg-[#edf0f6] w- mx-auto rounded-lg mt-16 p-5 flex flex-col"
+            >
+              <div class="flex justify-around -mt-8">
+                <img src="/images/box.png" alt="" />
+                <img src="/images/plant.png" alt="" />
+              </div>
+              <h3 class="text-xl font-bold my-5">Save more money</h3>
+              <p class="text-gray-400 w-52 text-sm">
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim.
+              </p>
+              <div class="btn text-white px-5 mt-5 text-center">VIEW TIPS</div>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
